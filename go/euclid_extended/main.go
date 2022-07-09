@@ -6,7 +6,7 @@ import (
 
 var qi, ri []int
 
-var fast_input = false
+var fast_input = true
 
 func main() {
 
@@ -51,6 +51,8 @@ func main() {
 		a = r
 	}
 	if a > 1 {
+		fmt.Println("\nResult: ")
+		fmt.Printf("Since gcd(a, m) = %d != 1\n", a)
 		fmt.Println("a is not invertible in modulo m")
 	} else {
 		fmt.Println("\nResult: ")
