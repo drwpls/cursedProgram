@@ -63,9 +63,13 @@ func main() {
 }
 
 func printRes(a, b, i int) {
-	if i == 2 {
+
+	fmt.Printf("= (%d) * (%d) - (%d) * (%d) \n", ri[i-3], a, ri[i-2], b)
+
+	if i == 3 {
 		return
 	}
-	fmt.Printf("= (%d) * (%d) - (%d) * (%d) \n", ri[i-3], a, ri[i-2], b)
+
+	fmt.Printf("= (%d) * (%d) - ((%d) - (%d) * (%d)) * (%d) \n\n", ri[i-3], a, ri[i-4], ri[i-3], qi[i-2], b)
 	printRes(-b, -a-b*qi[i-2], i-1)
 }
