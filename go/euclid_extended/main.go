@@ -4,14 +4,14 @@ import (
 	"fmt"
 )
 
-var qi, ri []int
-
+// flag, change it to false to use default a, m
 var fast_input = true
+
+var qi, ri []int
 
 func main() {
 
-	var a, m, y, y0, q, y1, r int
-
+	var a, m int
 	fmt.Println("Find a^-1 (mod m): ")
 	if fast_input != false {
 		fmt.Printf("a = ")
@@ -23,6 +23,12 @@ func main() {
 		m = 1759
 	}
 
+	ModuloInverse(a, m)
+
+}
+
+func ModuloInverse(a, m int) {
+	var y, y0, q, y1, r int
 	var a_s int = a
 	var m_s int = m
 
@@ -61,7 +67,6 @@ func main() {
 		printRes(1, qi[n-1], n)
 		fmt.Printf("Modulo inverse: %d^(-1) in modulo %d is %d\n", a_s, m_s, y)
 	}
-
 }
 
 func printRes(a, b, i int) {
